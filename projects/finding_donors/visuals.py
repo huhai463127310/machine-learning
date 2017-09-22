@@ -63,8 +63,16 @@ def evaluate(results, accuracy, f1):
     fig, ax = pl.subplots(2, 3, figsize = (11,7))
 
     # Constants
-    bar_width = 0.3
-    colors = ['#A00000','#00A0A0','#00A000']
+    bar_width = 0.2
+    #colors = ['#A00000','#00A0A0','#00A000']
+    colors = ['#A00000','#00A0A0','#00A000',
+        '#f3a879',
+        '#f37986',
+        '#f379da',
+        '#9379f3',
+        '#79f3e2',
+        '#86f379',
+        '#79f3bb',]
     
     # Super loop to plot four panels of data
     for k, learner in enumerate(results.keys()):
@@ -111,7 +119,7 @@ def evaluate(results, accuracy, f1):
     for i, learner in enumerate(results.keys()):
         patches.append(mpatches.Patch(color = colors[i], label = learner))
     pl.legend(handles = patches, bbox_to_anchor = (-.80, 2.53), \
-               loc = 'upper center', borderaxespad = 0., ncol = 3, fontsize = 'x-large')
+               loc = 'upper center', borderaxespad = 0., ncol = 5, fontsize = 'x-large')
     
     # Aesthetics
     pl.suptitle("Performance Metrics for Three Supervised Learning Models", fontsize = 16, y = 1.10)
