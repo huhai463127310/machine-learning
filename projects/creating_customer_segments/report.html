@@ -11654,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11666,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11880,17 +11884,17 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea ">
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -12102,17 +12106,17 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
@@ -12295,17 +12299,17 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
@@ -12449,17 +12453,17 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
@@ -12603,17 +12607,17 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
@@ -12721,17 +12725,17 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea ">
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -12832,7 +12836,7 @@ div#notebook {
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">drop_column</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># TODO：创建一个DecisionTreeRegressor（决策树回归器）并在训练集上训练它</span>
-<span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
+<span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
 <span class="c1"># TODO：输出在测试集上的预测得分</span>
@@ -12855,7 +12859,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.719680150017
+<pre>0.723800832652
 </pre>
 </div>
 </div>
@@ -21564,8 +21568,9 @@ iIiIpKXkkYiIiIiIiIiIpKXkkYiIiIiIiIiIpPV/ULXxGOg94mkAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>由概率图可见log变换后数据正态拟合度确实有明显提高。</p>
-<h1 id="&#20294;&#19981;&#26126;&#30333;AD&#26816;&#39564;&#32467;&#26524;&#20026;&#20309;&#20020;&#30028;&#20540;&#38543;&#26174;&#33879;&#27700;&#24179;&#38477;&#20302;&#32780;&#22686;&#22823;&#21602;&#65311;&#35831;&#32769;&#24072;&#35299;&#31572;"><strong><font color="red" style="background:yellow">&#20294;&#19981;&#26126;&#30333;AD&#26816;&#39564;&#32467;&#26524;&#20026;&#20309;&#20020;&#30028;&#20540;&#38543;&#26174;&#33879;&#27700;&#24179;&#38477;&#20302;&#32780;&#22686;&#22823;&#21602;&#65311;&#35831;&#32769;&#24072;&#35299;&#31572;</font></strong><a class="anchor-link" href="#&#20294;&#19981;&#26126;&#30333;AD&#26816;&#39564;&#32467;&#26524;&#20026;&#20309;&#20020;&#30028;&#20540;&#38543;&#26174;&#33879;&#27700;&#24179;&#38477;&#20302;&#32780;&#22686;&#22823;&#21602;&#65311;&#35831;&#32769;&#24072;&#35299;&#31572;">&#182;</a></h1><p>论坛已发贴：<a href="http://discussions.youdaxue.com/t/scipy-stats-anderson-anderson-darling/50712">scipy.stats.anderson中Anderson-Darling检测正态分布结果如何解读？</a></p>
+<p>由概率图可见log变换后数据正态拟合度确实有明显提高。<br>
+<strong><font color="red" style="background:yellow">但不明白AD检验结果为何临界值随显著水平降低而增大呢？请老师解答</font></strong>
+论坛已发贴：<a href="http://discussions.youdaxue.com/t/scipy-stats-anderson-anderson-darling/50712">scipy.stats.anderson中Anderson-Darling检测正态分布结果如何解读？</a></p>
 
 </div>
 </div>
@@ -24530,7 +24535,7 @@ K-Means聚类算法的优点：运算速度快，不需要数据是正态分布�
 <span class="n">n_clusters</span> <span class="o">=</span> <span class="mi">2</span>
 
 <span class="k">def</span> <span class="nf">get_center</span><span class="p">(</span><span class="n">cluster_instance</span><span class="p">):</span>
-    <span class="n">class_name</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">clusterer</span><span class="p">)</span><span class="o">.</span><span class="n">__name__</span>
+    <span class="n">class_name</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">clusterer</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span>
     <span class="k">if</span> <span class="n">class_name</span> <span class="o">==</span> <span class="s2">&quot;GaussianMixture&quot;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">cluster_instance</span><span class="o">.</span><span class="n">means_</span>
     <span class="k">elif</span> <span class="n">class_name</span> <span class="o">==</span> <span class="s2">&quot;KMeans&quot;</span><span class="p">:</span>
